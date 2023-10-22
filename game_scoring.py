@@ -98,7 +98,7 @@ def process_and_score_games(filename='hackathon-riot-data.csv'):
         # gold diff/min
         # ADR, assists/death ratio
     # vision score diff/min
-    # objective diff (turrets, inhibs, drakes, barons)
+    # objective diff (turrets, inhibs, drakes, barons, heralds are omitted because missing in LPL data)
     metrics_df['winner'] = features_df['winner']
     metrics_df['GoldDiffPerMinEnd'] = (features_df['GoldDiffEnd'] / features_df['gameDurationMin'])
     metrics_df['ADRDiffEnd'] = (features_df['BlueADREnd'] - features_df['RedADREnd'])
@@ -106,13 +106,11 @@ def process_and_score_games(filename='hackathon-riot-data.csv'):
     metrics_df['ObjectiveDiff'] = (features_df['BlueTowerKillsEnd'] + 
                                    features_df['BlueInhibKillsEnd'] +
                                    features_df['BlueBaronKillsEnd'] +
-                                   features_df['BlueDragonKillsEnd'] + 
-                                   features_df['NbRiftHeraldsBlue'] -
+                                   features_df['BlueDragonKillsEnd'] -
                                    features_df['RedTowerKillsEnd'] - 
                                    features_df['RedInhibKillsEnd'] - 
                                    features_df['RedDragonKillsEnd'] - 
-                                   features_df['RedBaronKillsEnd'] - 
-                                   features_df['NbRiftHeraldsRed'])
+                                   features_df['RedBaronKillsEnd'])
 
     metrics_df['ObjectiveDiff'] = metrics_df['ObjectiveDiff'].astype(int)
 
