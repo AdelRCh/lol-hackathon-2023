@@ -6,8 +6,6 @@ from sklearn.model_selection import train_test_split
 def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='oracles_elixir_lpl_data.csv'):
     #Initialize the DataFrame
     df = pd.read_csv(filename, sep=';')
-    # dataframe for potentially relevant features
-    features_df = pd.DataFrame()
 
     #Cleaning up values that ended up overkill for the Hackathon's purposes
     df.drop(columns=[#'esportsPlatformId',
@@ -34,7 +32,6 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
                  'DragonSoulTaker',
                  'DragonSoulTeam'], inplace=True)
 
-
     # can't use a row without the winner label since that's what is being predicted
     missing_label_row = (df['winner'].isna() == True)
     df.drop(index=df[missing_label_row].index, inplace=True)
@@ -59,6 +56,9 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
         if df[col].isnull().sum() != 0:
             df[col].fillna(df['gameDuration'], inplace=True)
 
+    # dataframe for collecting potentially relevant features
+    features_df = pd.DataFrame()
+
     # some features to look at later
     features_df['winner'] = df['winner']
     features_df['gameDurationMin'] = (df['gameDuration'] / 60)
@@ -77,6 +77,7 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
     #We chose the Assist-to-death ratio in the end, highlighting teamwork.
     #It was statistically significant in testing.
     df['BlueDeathsEndCopy'] = df['BlueDeathsEnd']
+
     #We don't want to deal with a Division By Zero situation here.
     df['BlueDeathsEnd'].replace(0.0, 1.0, inplace=True)
 
@@ -90,12 +91,13 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
     df['RedDeathsEnd'] = df['RedDeathsEndCopy']
     df.drop(columns=['RedDeathsEndCopy'], inplace=True)
 
+    # dataframe of the final calculated metrics used in logistic regression
     metrics_df = pd.DataFrame()
-    # @ 15 min and @ end
+    # @ end
         # gold diff/min
         # ADR, assists/death ratio
     # vision score diff/min
-    # objective diff (turrets, inhibs, drakes, barons, heralds are omitted because missing in LPL data)
+    # objective diff (turrets, inhibs, drakes, barons, no heralds because missing in LPL data)
     metrics_df['winner'] = features_df['winner']
     metrics_df['GoldDiffPerMinEnd'] = (features_df['GoldDiffEnd'] / features_df['gameDurationMin'])
     metrics_df['ADRDiffEnd'] = (features_df['BlueADREnd'] - features_df['RedADREnd'])
@@ -158,7 +160,7 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
         # gold diff/min
         # ADR, assists/death ratio
     # vision score diff/min
-    # objective diff (turrets, inhibs, drakes, barons)
+    # objective diff (turrets, inhibs, drakes, barons, no heralds because LPL data is missing them)
     lpl_metrics_df['winner'] = lpl_features_df['winner']
     lpl_metrics_df['GoldDiffPerMinEnd'] = (lpl_features_df['GoldDiffEnd'] / lpl_features_df['gameDurationMin'])
     lpl_metrics_df['ADRDiffEnd'] = (lpl_features_df['BlueADREnd'] - lpl_features_df['RedADREnd'])
@@ -177,18 +179,16 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
     # concatenates LPL dataframe to the main dataframe
     metrics_df = pd.concat([metrics_df, lpl_metrics_df], ignore_index=True)
 
-    # these two features are omitted because LPL data is missing them
-    metrics_df.drop(columns=['GoldDiffPerMin15', 'ADRDiff15'], inplace=True)
-
+    # standardizing the data because of outliers
     col_list = metrics_df.columns.tolist()
     col_list = col_list[1:]
 
     scaler = StandardScaler()
     metrics_rescaled = scaler.fit_transform(metrics_df[col_list])
-    metrics_rescaled = pd.DataFrame(data=metrics_rescaled,columns=col_list)
+    metrics_rescaled = pd.DataFrame(data=metrics_rescaled, columns=col_list)
 
     #Adel's quick additions after Sarah delivered the data above, using all the data:
-    logreg = LogisticRegression(max_iter = 500,n_jobs=-1)
+    logreg = LogisticRegression(max_iter=500, n_jobs=-1)
     y = metrics_df['winner'].apply(lambda x: 1 if x == 'red' else 0)
 
     #Fitting a quick logistic regression to predict whether the winning team is blue or red:
