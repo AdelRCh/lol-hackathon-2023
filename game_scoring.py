@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
-def process_and_score_games(filename='hackathon-riot-data.csv'):
+def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='oracles_elixir_lpl_data.csv'):
     #Initialize the DataFrame
     df = pd.read_csv(filename, sep=';')
     # dataframe for potentially relevant features
@@ -70,11 +70,8 @@ def process_and_score_games(filename='hackathon-riot-data.csv'):
     features_df['RedBaronKillsEnd'] = df['RedBaronKillsEnd']
     features_df['BlueDragonKillsEnd'] = df['BlueDragonKillsEnd']
     features_df['RedDragonKillsEnd'] = df['RedDragonKillsEnd']
-
     features_df['GoldDiffEnd'] = df['BlueTotalGoldEnd'] - df['RedTotalGoldEnd']
-
     features_df['VisionScoreBlue'] = df['VisionScoreTopBlue'] + df['VisionScoreJgBlue'] + df['VisionScoreMidBlue'] + df['VisionScoreADBlue'] + df['VisionScoreSupBlue']
-
     features_df['VisionScoreRed'] = df['VisionScoreTopRed'] + df['VisionScoreJgRed'] + df['VisionScoreMidRed'] + df['VisionScoreADRed'] + df['VisionScoreSupRed']
 
     #We chose the Assist-to-death ratio in the end, highlighting teamwork.
@@ -113,6 +110,75 @@ def process_and_score_games(filename='hackathon-riot-data.csv'):
                                    features_df['RedBaronKillsEnd'])
 
     metrics_df['ObjectiveDiff'] = metrics_df['ObjectiveDiff'].astype(int)
+
+    # integrating LPL data
+    lpl_df = pd.read_csv(lplfilename, sep=';')
+
+    # 1 indicates a win for blue result and red result, so a winner column can be obtained
+    lpl_df['BlueResult'].replace(1, 'blue', inplace=True)
+    lpl_df['BlueResult'].replace(0, 'red', inplace=True)
+    lpl_df.rename(columns={'BlueResult':'winner'}, inplace=True) 
+    lpl_df.drop(columns=['RedResult'], inplace=True)
+
+    # dataframe to collect necessary columns to calculate the 4 metrics
+    lpl_features_df = pd.DataFrame()
+    lpl_features_df['winner'] = lpl_df['winner']
+
+    col_list = features_df.columns.tolist()
+    lpl_col_list = lpl_df.columns.tolist()
+
+    # copy pasta-ing columns
+    for col in col_list:
+        if col in lpl_col_list:
+            lpl_features_df[col] = lpl_df[col]
+        else:
+            continue
+            
+    # calculating other columns used in the metrics
+    lpl_features_df['gameDurationMin'] = (lpl_df['gameDuration'] / 60)
+    lpl_features_df['GoldDiffEnd'] = lpl_df['GoldDiffEndTop'] + lpl_df['GoldDiffEndJg'] + lpl_df['GoldDiffEndMid'] + lpl_df['GoldDiffEndAD'] + lpl_df['GoldDiffEndSup']
+    lpl_features_df['VisionScoreBlue'] = lpl_df['VisionScoreTopBlue'] + lpl_df['VisionScoreJgBlue'] + lpl_df['VisionScoreMidBlue'] + lpl_df['VisionScoreADBlue'] + lpl_df['VisionScoreSupBlue']
+    lpl_features_df['VisionScoreRed'] = lpl_df['VisionScoreTopRed'] + lpl_df['VisionScoreJgRed'] + lpl_df['VisionScoreMidRed'] + lpl_df['VisionScoreADRed'] + lpl_df['VisionScoreSupRed']
+
+    # ADR, assists/deaths ratio
+    lpl_df['BlueDeathsEndCopy'] = lpl_df['BlueDeathsEnd']
+    lpl_df['BlueDeathsEnd'].replace(0.0, 1.0, inplace=True)
+    lpl_features_df['BlueADREnd'] = (lpl_df['BlueAssistsEnd'] / lpl_df['BlueDeathsEnd'])
+    lpl_df['BlueDeathsEnd'] = lpl_df['BlueDeathsEndCopy']
+    lpl_df.drop(columns=['BlueDeathsEndCopy'], inplace=True)
+
+    lpl_df['RedDeathsEndCopy'] = lpl_df['RedDeathsEnd']
+    lpl_df['RedDeathsEnd'].replace(0.0, 1.0, inplace=True)
+    lpl_features_df['RedADREnd'] = (lpl_df['RedAssistsEnd'] / lpl_df['RedDeathsEnd'])
+    lpl_df['RedDeathsEnd'] = lpl_df['RedDeathsEndCopy']
+    lpl_df.drop(columns=['RedDeathsEndCopy'], inplace=True)
+
+    lpl_metrics_df = pd.DataFrame()
+    # @ end
+        # gold diff/min
+        # ADR, assists/death ratio
+    # vision score diff/min
+    # objective diff (turrets, inhibs, drakes, barons)
+    lpl_metrics_df['winner'] = lpl_features_df['winner']
+    lpl_metrics_df['GoldDiffPerMinEnd'] = (lpl_features_df['GoldDiffEnd'] / lpl_features_df['gameDurationMin'])
+    lpl_metrics_df['ADRDiffEnd'] = (lpl_features_df['BlueADREnd'] - lpl_features_df['RedADREnd'])
+    lpl_metrics_df['VisionScoreDiffPerMin'] = ((lpl_features_df['VisionScoreBlue'] - lpl_features_df['VisionScoreRed']) / lpl_features_df['gameDurationMin'])
+    lpl_metrics_df['ObjectiveDiff'] = (lpl_features_df['BlueTowerKillsEnd'] + 
+                                lpl_features_df['BlueInhibKillsEnd'] + 
+                                lpl_features_df['BlueBaronKillsEnd'] + 
+                                lpl_features_df['BlueDragonKillsEnd'] -
+                                lpl_features_df['RedTowerKillsEnd'] -
+                                lpl_features_df['RedInhibKillsEnd'] - 
+                                lpl_features_df['RedBaronKillsEnd'] -
+                                lpl_features_df['RedDragonKillsEnd'])
+
+    lpl_metrics_df['ObjectiveDiff'] = lpl_metrics_df['ObjectiveDiff'].astype(int)
+
+    # concatenates LPL dataframe to the main dataframe
+    metrics_df = pd.concat([metrics_df, lpl_metrics_df], ignore_index=True)
+
+    # these two features are omitted because LPL data is missing them
+    metrics_df.drop(columns=['GoldDiffPerMin15', 'ADRDiff15'], inplace=True)
 
     col_list = metrics_df.columns.tolist()
     col_list = col_list[1:]
