@@ -114,15 +114,24 @@ if __name__=='__main__':
     final_df = pd.read_csv('process_everything.csv',sep=';')
     final_df = final_df[final_df.gameDate.str.startswith(year_selected)]
 
-    print(final_df.columns)
+    #print(final_df.columns)
 
     rating_list = []
     elo_log = {}
 
+    elo_tiers = {
+        10: 1200,
+        20: 1500,
+        30: 1800,
+        40: 2100,
+        50: 2100,
+        60: 2100
+    }
+
     for index, row in final_df.iterrows():
         #Starting values at 1200 for elos
-        old_blue_rating = elo_log.get(row['blue'],1200)
-        old_red_rating = elo_log.get(row['red'],1200)
+        old_blue_rating = elo_log.get(row['blue'],elo_tiers.get(row['kScore'],1200))
+        old_red_rating = elo_log.get(row['red'],elo_tiers.get(row['kScore'],1200))
 
         elo_blue, elo_red = elo_formula(row.blue, row.red, \
             row.winner, row.gameDate, (row.kScore * row.kMult), row.leagueLabel,\
