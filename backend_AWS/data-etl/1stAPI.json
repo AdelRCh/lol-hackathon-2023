@@ -1,0 +1,632 @@
+[
+    {
+        "leagueLabel": "Arabian League",
+        "leagueId": 109545772895506416,
+        "stage_name": [
+            "Spring 2023 Regular Season 2023",
+            "Summer 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "CBLOL",
+        "leagueId": 98767991332355504,
+        "stage_name": [
+            "CBLOL 2020 Split 1 Regular Season 2020",
+            "CBLOL 2020 Split 1 Promotion Qualifiers 2020",
+            "CBLOL Split 2 2020 Regular Season 2020",
+            "CBLOL Split 2 2020 Playoffs 2020",
+            "CBLOL 2020 Split 1 Playoffs 2020",
+            "CBLOL Split 1 2021 Regular Season 2021",
+            "CBLOL Split 1 2021 Playoffs 2021",
+            "CBLOL Split 2 2021 Play In Groups 2021",
+            "CBLOL Split 2 2021 Playoffs 2021",
+            "CBLOL Split 1 2022 Play In Groups 2022",
+            "CBLOL Split 2 2022 Play In Groups 2022",
+            "CBLOL Split 2 2022 Playoffs 2022",
+            "CBLOL Split 1 2022 Playoffs 2022",
+            "Split 1 2023 Regular Season 2023",
+            "Split 1 2023 Playoffs 2023",
+            "CBLOL 2023 Split 2 Regular Season 2023",
+            "CBLOL 2023 Split 2 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "CBLOL Academy",
+        "leagueId": 105549980953490848,
+        "stage_name": [
+            "CBLOL Academy Split 1 2021 Regular Season 2021",
+            "CBLOL Academy Split 1 2021 Playoffs 2021",
+            "CBLOL Academy Split 1 2022 Regular Season 2022",
+            "CBLOL Academy Split 1 2022 Playoffs 2022",
+            "CBLOL Academy Split 2 2022 Regular Season 2022",
+            "CBLOL Academy Split 2 2022 Playoffs 2022",
+            "Split 1 2023 Group Stage 2023",
+            "CBLOL Academy 2023 Split 2 Regular Season 2023",
+            "CBLOL Academy 2023 Split 2 Playoffs 2023",
+            "Split 1 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "College Championship",
+        "leagueId": 107898214974993344,
+        "stage_name": [
+            "College Championship 2022 Playoffs 2022"
+        ]
+    },
+    {
+        "leagueLabel": "EMEA Masters",
+        "leagueId": 100695891328981120,
+        "stage_name": [
+            "EU Masters Spring 2020 Group Stage 2020",
+            "EU Masters Spring 2020 Play In Knockouts 2020",
+            "EU Masters Summer 2020 Group Stage 2020",
+            "EU Masters Summer 2020 Play In Knockouts 2020",
+            "EU Masters Spring 2020 Playoffs 2020",
+            "EU Masters Summer 2020 Playoffs 2020",
+            "European Masters - Summer 2021 Play Ins Group Stage 2021",
+            "European Masters - Summer 2021 Play Ins Playoffs 2021",
+            "EU Masters Spring 2021 - Play Ins Group Stage 2021",
+            "EU Masters Spring 2021 - Play Ins Playoffs 2021",
+            "EU Masters Spring 2021 Group Stage 2021",
+            "EU Masters Spring 2021 Playoffs 2021",
+            "EU Masters Summer 2021 Group Stage 2021",
+            "EU Masters Summer 2021 Playoffs 2021",
+            "Summer 2022 Main Event Group Stage 2022",
+            "Summer 2022 Main Event Playoffs 2022",
+            "Spring 2022 Play Ins Group Stage 2022",
+            "Spring 2022 Play Ins Play In Knockouts 2022",
+            "Spring 2022 Main Event Group Stage 2022",
+            "Spring 2022 Main Event Playoffs 2022",
+            "Summer 2022 Play Ins Group Stage 2022",
+            "Summer 2022 Play Ins Play In Knockouts 2022",
+            "Main Stage - Spring 2023 Group Stage 2023",
+            "Summer 2023 Group Stage 2023",
+            "Main Stage - Spring 2023 Playoffs 2023",
+            "Summer 2023 Playoffs 2023",
+            "Play Ins - Spring 2023 Group Stage 2023",
+            "Play Ins - Spring 2023 Play In Knockouts 2023",
+            "Summer 2023 Play In Knockouts 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Elite Series",
+        "leagueId": 107407335299756368,
+        "stage_name": [
+            "Elite Series Spring 2022 Regular Season 2022",
+            "Elite Series Summer 2022 Regular Season 2022",
+            "Elite Series Spring 2022 Playoffs 2022",
+            "Elite Series Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Esports Balkan League",
+        "leagueId": 105266111679554384,
+        "stage_name": [
+            "Esports Balkan League Spring 2021 Regular Season 2021",
+            "Esports Balkan League Spring 2021 Playoffs 2021",
+            "Esports Balkan League Summer 2021 Regular Season 2021",
+            "Esports Balkan League Summer 2021 Playoffs 2021",
+            "Esports Balkan League Spring 2022 Regular Season 2022",
+            "Esports Balkan League Summer 2022 Regular Season 2022",
+            "Esports Balkan League Spring 2022 Playoffs 2022",
+            "Esports Balkan League Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Greek Legends League",
+        "leagueId": 105266108767593296,
+        "stage_name": [
+            "Greek Legends League Spring 2021 Regular Season 2021",
+            "Greek Legends League Spring 2021 Playoffs 2021",
+            "Greek Legends League Summer 2021 Play In Groups 2021",
+            "Greek Legends League Summer 2021 Playoffs 2021",
+            "Greek Legends League Spring 2022 Regular Season 2022",
+            "Greek Legends League Spring 2022 Playoffs 2022",
+            "Greek Legends League Summer 2022 Regular Season 2022",
+            "Greek Legends League Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Summer 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Hitpoint Masters",
+        "leagueId": 105266106309666624,
+        "stage_name": [
+            "Hitpoint Masters Spring 2021 Regular Season 2021",
+            "Hitpoint Masters Spring 2021 Playoffs 2021",
+            "Hitpoint Masters Summer 2021 Regular Season 2021",
+            "Hitpoint Masters Summer 2021 Playoffs 2021",
+            "Hitpoint Masters Spring 2022 Regular Season 2022",
+            "Hitpoint Masters Spring 2022 Playoffs 2022",
+            "Hitpoint Masters Summer 2022 Regular Season 2022",
+            "Hitpoint Masters Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Summer 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LCK",
+        "leagueId": 98767991310872064,
+        "stage_name": [
+            "LCK 2020 Spring Split Regular Season 2020",
+            "LCK 2020 Spring Split Playoffs 2020",
+            "LCK Summer 2020 Regular Season 2020",
+            "LCK Summer 2020 Playoffs 2020",
+            "LCK Spring 2021 Regular Season 2021",
+            "LCK Spring 2021 Playoffs 2021",
+            "LCK Summer 2021 Regular Season 2021",
+            "LCK Summer 2021 Playoffs 2021",
+            "LCK Regional Finals 2021 Regional Finals 2021",
+            "LCK Spring 2022 Regular Season 2022",
+            "LCK Spring 2022 Playoffs 2022",
+            "LCK Summer 2022 Regular Season 2022",
+            "LCK Summer 2022 Playoffs 2022",
+            "LCK Regional Finals 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LCK Academy",
+        "leagueId": 108203770023880320,
+        "stage_name": [
+            "2022 LCK Academy 1  Regular Season 2022",
+            "2022 LCK Academy 1  Playoffs 2022"
+        ]
+    },
+    {
+        "leagueLabel": "LCK Challengers",
+        "leagueId": 98767991335774720,
+        "stage_name": [
+            "LCK Challengers Spring 2021 Regular Season 2021",
+            "LCK Challengers Spring 2021 Playoffs 2021",
+            "LCK Challengers Summer 2021 Regular Season 2021",
+            "LCK Challengers Summer 2021 Playoffs 2021",
+            "LCK Challengers Spring 2022 Regular Season 2022",
+            "LCK Challengers Summer 2022 Regular Season 2022",
+            "LCK Challengers Spring 2022 Playoffs 2022",
+            "LCK Challengers Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LCL",
+        "leagueId": 98767991355908944,
+        "stage_name": [
+            "LCL Spring 2021 Regular Season 2021",
+            "LCL Spring 2021 Playoffs 2021",
+            "LCL Summer 2021 Regular Season 2021",
+            "LCL Summer 2021 Playoffs 2021",
+            "LCL Spring 2022 Regular Season 2022"
+        ]
+    },
+    {
+        "leagueLabel": "LCO",
+        "leagueId": 98767991331560960,
+        "stage_name": [
+            "OPL 2020 Split 1 Regular Season 2020",
+            "OPL 2020 Split 1 Playoffs 2020",
+            "OPL 2020 Split 2 Regular Season 2020",
+            "OPL 2020 Split 2 Playoffs 2020"
+        ]
+    },
+    {
+        "leagueLabel": "LCO",
+        "leagueId": 105709090213554608,
+        "stage_name": [
+            "LCO Split 2 2021 Regular Season 2021",
+            "LCO Split 2 2021 Playoffs 2021",
+            "LCO Split 1 2022 Regular Season 2022",
+            "LCO Split 2 2022 Regular Season 2022",
+            "LCO Split 1 2022 Playoffs 2022",
+            "LCO Split 2 2022 Playoffs 2022",
+            "Split 1 2023 Regular Season 2023",
+            "Split 1 2023 Group Stage 2023",
+            "Split 1 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LCS",
+        "leagueId": 98767991299243168,
+        "stage_name": [
+            "LCS Spring 2020 Regular Season 2020",
+            "LCS Spring 2020 Playoffs 2020",
+            "LCS Summer 2020 Regular Season 2020",
+            "LCS Summer 2020 Playoffs 2020",
+            "LCS Lock In 2021 Group Stage 2021",
+            "LCS Lock In 2021 Playoffs 2021",
+            "LCS Summer 2021 Regular Season 2021",
+            "2021 Mid-Season Showdown Playoffs 2021",
+            "LCS Summer 2021 Playoffs 2021",
+            "LCS Lock In 2022 Group Stage 2022",
+            "LCS Spring 2022 Regular Season 2022",
+            "LCS Summer 2022 Regular Season 2022",
+            "LCS Summer 2022 Playoffs 2022",
+            "LCS Lock In 2022 Playoffs 2022",
+            "LCS Spring 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LCS Challengers",
+        "leagueId": 109511549831443328,
+        "stage_name": [
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LCS Challengers Qualifiers",
+        "leagueId": 109518549825754240,
+        "stage_name": [
+            "Promotion Spring 2023 Playoffs 2023",
+            "#1 Spring 2023 Group Stage 2023",
+            "#2 Spring 2023 Group Stage 2023",
+            "#1 Spring 2023 Playoffs 2023",
+            "#2 Spring 2023 Playoffs 2023",
+            "#1 Summer 2023 Group Stage 2023",
+            "#1 Summer 2023 Playoffs 2023",
+            "#2 Summer 2023 Group Stage 2023",
+            "#2 Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LEC",
+        "leagueId": 98767991302996016,
+        "stage_name": [
+            "LEC Spring 2020 Regular Season 2020",
+            "LEC Spring 2020 Playoffs 2020",
+            "LEC Summer 2020 Regular Season 2020",
+            "LEC Summer 2020 Playoffs 2020",
+            "LEC Spring 2021 Regular Season 2021",
+            "LEC Spring 2021 Playoffs 2021",
+            "LEC Summer 2021 Regular Season 2021",
+            "LEC Summer 2021 Playoffs 2021",
+            "LEC Spring 2022 Regular Season 2022",
+            "LEC Summer 2022 Regular Season 2022",
+            "LEC Summer 2022 Playoffs 2022",
+            "LEC Spring 2022 Playoffs 2022",
+            "Winter 2023 Regular Season 2023",
+            "Spring 2023 Regular Season 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Group Stage 2023",
+            "Summer 2023 Playoffs 2023",
+            "Season Finals 2023 Regional Finals 2023",
+            "Winter 2023 Group Stage 2023",
+            "Winter 2023 Playoffs 2023",
+            "Spring 2023 Group Stage 2023",
+            "Spring 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LJL",
+        "leagueId": 98767991349978720,
+        "stage_name": [
+            "LJL Spring 2020 Regular Season 2020",
+            "LJL Spring 2020 Playoffs 2020",
+            "LJL Summer 2020 Regular Season 2020",
+            "LJL Summer 2020 Playoffs 2020",
+            "LJL Spring 2021 Regular Season 2021",
+            "LJL Spring 2021 Playoffs 2021",
+            "LJL Summer 2021 Regular Season 2021",
+            "LJL Summer 2021 Playoffs 2021",
+            "LJL Spring 2022 Regular Season 2022",
+            "LJL Spring 2022 Playoffs 2022",
+            "LJL Summer 2022 Regular Season 2022",
+            "LJL Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LJL Academy",
+        "leagueId": 106827757669296912,
+        "stage_name": [
+            "LJL Academy 2021 Regular Season 2021",
+            "LJL Academy 2021 Playoffs 2021",
+            "LJL Academy 2022 Regular Season 2022",
+            "LJL Academy 2022 Playoffs 2022",
+            "2023 Regular Season 2023",
+            "2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LLA",
+        "leagueId": 101382741235120464,
+        "stage_name": [
+            "LLA 2020 Spring Split Regular Season 2020",
+            "LLA 2020 Spring Split Playoffs 2020",
+            "LLA Closing 2020 Regular Season 2020",
+            "LLA Closing 2020 Playoffs 2020",
+            "LLA Opening 2021 Regular Season 2021",
+            "LLA Opening 2021 Playoffs 2021",
+            "LLA Closing 2021 Regular Season 2021",
+            "LLA Closing 2021 Playoffs 2021",
+            "LLA Promotion 2021 Group Stage 2021",
+            "LLA Promotion 2021 Playoffs 2021",
+            "LLA Opening 2022 Regular Season 2022",
+            "LLA Opening 2022 Playoffs 2022",
+            "LLA Closing 2022 Regular Season 2022",
+            "LLA Promotion 2022 Playoffs 2022",
+            "LLA Closing 2022 Playoffs 2022",
+            "Opening 2023 Regular Season 2023",
+            "Opening 2023 Playoffs 2023",
+            "Closing 2023 Regular Season 2023",
+            "Closing 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "LPL",
+        "leagueId": 98767991314006704,
+        "stage_name": [
+            "Spring Regular Season 2020",
+            "Spring Playoffs 2020",
+            "Summer Regular Season 2020",
+            "Summer Playoffs 2020",
+            "Regional Qualifier Playoffs 2020",
+            "Spring Regular Season 2021",
+            "Spring Playoffs 2021",
+            "Summer Regular Season 2021",
+            "Summer Playoffs 2021",
+            "Regional Qualifier Playoffs 2021",
+            "Spring Regular Season 2022",
+            "Summer Regular Season 2022",
+            "Summer Playoffs 2022",
+            "Spring Playoffs 2022",
+            "Spring Regular Season 2023",
+            "Summer 2023 Regular Season 2023",
+            "Spring Playoffs 2023",
+            "Summer 2023 Playoffs 2023",
+            "Regional Finals 2023 Regional Finals 2023"
+        ]
+    },
+    {
+        "leagueLabel": "La Ligue Fran\u00e7aise",
+        "leagueId": 105266103462388560,
+        "stage_name": [
+            "LFL Spring 2021 Regular Season 2021",
+            "LFL Spring 2021 Playoffs 2021",
+            "lfl_2021_summer Regular Season 2021",
+            "lfl_2021_summer Playoffs 2021",
+            "LFL Spring 2022 Regular Season 2022",
+            "LFL Spring 2022 Playoffs 2022",
+            "LFL Summer 2022 Regular Season 2022",
+            "LFL Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Liga Portuguesa",
+        "leagueId": 105266101075764032,
+        "stage_name": [
+            "Liga Portuguesa Spring 2021 Regular Season 2021",
+            "Liga Portuguesa Summer 2021 Regular Season 2021",
+            "Liga Portuguesa Spring 2021 Playoffs 2021",
+            "Liga Portuguesa Summer 2021 Playoffs 2021",
+            "Liga Portuguesa Spring 2022 Regular Season 2022",
+            "Liga Portuguesa Summer 2022 Regular Season 2022",
+            "Liga Portuguesa Spring 2022 Playoffs 2022",
+            "Liga Portuguesa Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "MSI",
+        "leagueId": 98767991325878496,
+        "stage_name": [
+            "MSI 2021 Group Stage 2021",
+            "MSI 2021 Playoffs 2021",
+            "MSI 2022 Group Stage 2022",
+            "MSI 2022 Playoffs 2022",
+            "MSI 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "NLC",
+        "leagueId": 105266098308571968,
+        "stage_name": [
+            "NLC Spring 2021 Regular Season 2021",
+            "NLC Spring 2021 Playoffs 2021",
+            "NLC Summer 2021 Group Stage 2021",
+            "NLC Summer 2021 Regular Season 2021",
+            "NLC Summer 2021 Playoffs 2021",
+            "NLC Spring 2022 Regular Season 2022",
+            "NLC Spring 2022 Playoffs 2022",
+            "NLC Summer 2022 Regular Season 2022",
+            "NLC Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "North Regional League",
+        "leagueId": 110371976858004496,
+        "stage_name": [
+            "Closing 2023 Regular Season 2023",
+            "Closing 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "PCS",
+        "leagueId": 104366947889790208,
+        "stage_name": [
+            "PCS Summer 2020 Regular Season 2020",
+            "PCS Summer 2020 Playoffs 2020",
+            "PCS Summer 2021 Regular Season 2021",
+            "PCS Summer 2021 Playoffs 2021",
+            "PCS Spring 2022 Regular Season 2022",
+            "PCS Spring 2022 Playoffs 2022",
+            "PCS Summer 2022 Regular Season 2022",
+            "PCS Summer 2022 Playoffs 2022",
+            "Playoffs - Spring 2023 Playoffs 2023",
+            "Playoffs - Summer 2023 Playoffs 2023",
+            "Spring 2023 Regular Season 2023",
+            "Summer 2023 Regular Season 2023"
+        ]
+    },
+    {
+        "leagueLabel": "PG Nationals",
+        "leagueId": 105266094998946944,
+        "stage_name": [
+            "PG Nationals Spring 2021 Regular Season 2021",
+            "PG Nationals Spring 2021 Playoffs 2021",
+            "PG Nationals Summer 2021 Play In Groups 2021",
+            "PG Nationals Summer 2021 Playoffs 2021",
+            "PG Nationals Spring 2022 Regular Season 2022",
+            "PG Nationals Summer 2022 Regular Season 2022",
+            "PG Nationals Spring 2022 Playoffs 2022",
+            "PG Nationals Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Prime League",
+        "leagueId": 105266091639104320,
+        "stage_name": [
+            "Prime League Spring 2021 Regular Season 2021",
+            "Prime League Spring 2021 Playoffs 2021",
+            "Prime League Summer 2021 Regular Season 2021",
+            "Prime League Summer 2021 Playoffs 2021",
+            "Prime League Spring 2022 Regular Season 2022",
+            "Prime League Spring 2022 Playoffs 2022",
+            "Prime League Summer 2022 Regular Season 2022",
+            "Prime League Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "South Regional League",
+        "leagueId": 110372322609949920,
+        "stage_name": [
+            "Closing 2023 Regular Season 2023",
+            "Closing 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "SuperLiga",
+        "leagueId": 105266074488398656,
+        "stage_name": [
+            "Superliga Spring 2021 Regular Season 2021",
+            "Superliga Spring 2021 Playoffs 2021",
+            "Superliga Summer 2021 Regular Season 2021",
+            "Superliga Summer 2021 Playoffs 2021",
+            "Superliga Spring 2022 Regular Season 2022",
+            "Superliga Spring 2022 Playoffs 2022",
+            "Superliga Summer 2022 Regular Season 2022",
+            "Superliga Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "TCL",
+        "leagueId": 98767991343597632,
+        "stage_name": [
+            "TCL Winter 2020 Regular Season 2020",
+            "TCL Summer 2020 Regular Season 2020",
+            "TCL Winter 2020 Playoffs 2020",
+            "TCL Summer 2020 Playoffs 2020",
+            "TCL Winter 2021 Regular Season 2021",
+            "TCL Winter 2021 Playoffs 2021",
+            "TCL Summer 2021 Regular Season 2021",
+            "TCL Summer 2021 Playoffs 2021",
+            "TCL Winter 2022 Regular Season 2022",
+            "TCL Winter 2022 Playoffs 2022",
+            "TCL Summer 2022 Regular Season 2022",
+            "TCL Summer 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Ultraliga",
+        "leagueId": 105266088231437424,
+        "stage_name": [
+            "Ultraliga Spring 2021 Regular Season 2021",
+            "Ultraliga Summer 2021 Play In Groups 2021",
+            "Ultraliga Summer 2021 Playoffs 2021",
+            "Ultraliga Spring 2021 Playoffs 2021",
+            "Ultraliga Spring 2022 Regular Season 2022",
+            "Ultraliga Summer 2022 Regular Season 2022",
+            "Ultraliga Summer 2022 Playoffs 2022",
+            "Ultraliga Spring 2022 Playoffs 2022",
+            "Spring 2023 Regular Season 2023",
+            "Spring 2023 Playoffs 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "VCS",
+        "leagueId": 107213827295848784,
+        "stage_name": [
+            "VCS Winter 2021 Regular Season 2021",
+            "VCS Winter 2021 Playoffs 2021",
+            "Spring 2023 Regular Season 2023",
+            "Summer 2023 Regular Season 2023",
+            "Summer 2023 Playoffs 2023",
+            "Spring 2023 Playoffs 2023"
+        ]
+    },
+    {
+        "leagueLabel": "Worlds",
+        "leagueId": 98767975604431408,
+        "stage_name": [
+            "Worlds 2020 Group Stage 2020",
+            "Worlds 2020 Play In Knockouts 2020",
+            "Worlds 2020 Playoffs 2020",
+            "worlds_2021 Group Stage 2021",
+            "worlds_2021 Playoffs 2021",
+            "worlds_2021 Play In Knockouts 2021",
+            "Worlds 2022 Group Stage 2022",
+            "Worlds 2022 Play In Knockouts 2022",
+            "Worlds 2022 Playoffs 2022"
+        ]
+    }
+]
