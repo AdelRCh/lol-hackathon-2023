@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "899a5c28-b109-4977-9900-9cab30c23e05",
+		"name": "RIOT_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tournametRanking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xsvtj1vo7a.execute-api.ap-south-1.amazonaws.com/tournament_rankings/98767991314006704?stage_name=Spring Regular Season 2020",
+					"protocol": "https",
+					"host": [
+						"xsvtj1vo7a",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"tournament_rankings",
+						"98767991314006704"
+					],
+					"query": [
+						{
+							"key": "stage_name",
+							"value": "Spring Regular Season 2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "globalRanking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xsvtj1vo7a.execute-api.ap-south-1.amazonaws.com/global_rankings?number_of_teams=2",
+					"protocol": "https",
+					"host": [
+						"xsvtj1vo7a",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"global_rankings"
+					],
+					"query": [
+						{
+							"key": "number_of_teams",
+							"value": "2"
+						},
+						{
+							"key": "team_id",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teamRankings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xsvtj1vo7a.execute-api.ap-south-1.amazonaws.com/teamRankings?team_id=[98767991926151025,98767991877340524,98926509885559666]&tournament_id=[98767991302996016,98767991325878496,98767991299243168]",
+					"protocol": "https",
+					"host": [
+						"xsvtj1vo7a",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"teamRankings"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "[98767991926151025,98767991877340524,98926509885559666]"
+						},
+						{
+							"key": "tournament_id",
+							"value": "[98767991302996016,98767991325878496,98767991299243168]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
