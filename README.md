@@ -5,4 +5,4 @@ This repository contains the files created and used during the 2023 LoL Esports 
 
 [Frontend repository](https://github.com/mashiourcse/LOL_aws_frontend)
 
-[Project Branch with AWS additions](https://github.com/AdelRCh/lol-hackathon-2023/tree/sakshi-backend)https://github.com/AdelRCh/lol-hackathon-2023/tree/sakshi-backend
+[Project Branch with AWS additions](https://github.com/AdelRCh/lol-hackathon-2023/tree/sakshi-backend)
