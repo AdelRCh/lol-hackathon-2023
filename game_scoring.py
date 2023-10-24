@@ -165,14 +165,14 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
     lpl_metrics_df['GoldDiffPerMinEnd'] = (lpl_features_df['GoldDiffEnd'] / lpl_features_df['gameDurationMin'])
     lpl_metrics_df['ADRDiffEnd'] = (lpl_features_df['BlueADREnd'] - lpl_features_df['RedADREnd'])
     lpl_metrics_df['VisionScoreDiffPerMin'] = ((lpl_features_df['VisionScoreBlue'] - lpl_features_df['VisionScoreRed']) / lpl_features_df['gameDurationMin'])
-    lpl_metrics_df['ObjectiveDiff'] = (lpl_features_df['BlueTowerKillsEnd'] + 
-                                lpl_features_df['BlueInhibKillsEnd'] + 
-                                lpl_features_df['BlueBaronKillsEnd'] + 
-                                lpl_features_df['BlueDragonKillsEnd'] -
-                                lpl_features_df['RedTowerKillsEnd'] -
-                                lpl_features_df['RedInhibKillsEnd'] - 
-                                lpl_features_df['RedBaronKillsEnd'] -
-                                lpl_features_df['RedDragonKillsEnd'])
+    lpl_metrics_df['ObjectiveDiff'] = (lpl_features_df['BlueTowerKillsEnd'] +
+                                       lpl_features_df['BlueInhibKillsEnd'] + 
+                                       lpl_features_df['BlueBaronKillsEnd'] + 
+                                       lpl_features_df['BlueDragonKillsEnd'] -
+                                       lpl_features_df['RedTowerKillsEnd'] -
+                                       lpl_features_df['RedInhibKillsEnd'] - 
+                                       lpl_features_df['RedBaronKillsEnd'] -
+                                       lpl_features_df['RedDragonKillsEnd'])
 
     lpl_metrics_df['ObjectiveDiff'] = lpl_metrics_df['ObjectiveDiff'].astype(int)
 
@@ -193,12 +193,12 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
 
     #Fitting a quick logistic regression to predict whether the winning team is blue or red:
     #A high score would indicate some viability. (We wound up obtaining at 99% testing score)
-    X_train, X_test, y_train, y_test = train_test_split(metrics_rescaled,y,test_size = 0.3)
-    logreg.fit(X_train,y_train)
+    X_train, X_test, y_train, y_test = train_test_split(metrics_rescaled, y, test_size=0.3)
+    logreg.fit(X_train, y_train)
 
     #Multiply the coefs that we obtained by the standardized metrics
     for index, col in enumerate(metrics_rescaled.columns):
-        metrics_rescaled[col]*=logreg.coef_[0,index]
+        metrics_rescaled[col] *= logreg.coef_[0, index]
 
     #Perform the sum to obtain the total score
     metrics_rescaled['gameScore'] = metrics_rescaled.sum(axis=1)
@@ -206,8 +206,8 @@ def process_and_score_games(filename='hackathon-riot-data.csv', lplfilename='ora
     #Assemble our output
     metrics_rescaled['esportsPlatformId'] = platformId_ser
 
-    return metrics_rescaled[['esportsPlatformId','gameScore']]
+    return metrics_rescaled[['esportsPlatformId', 'gameScore']]
 
 if __name__=='__main__':
     df_scores = process_and_score_games()
-    df_scores.to_csv('game_scores.csv',sep=';',index=False)
+    df_scores.to_csv('game_scores.csv', sep=';', index=False)
